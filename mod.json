@@ -1,70 +1,9 @@
 {
-  "name": "creator",
-  "displayName": "创世神V7-creator",
-  "author": "[pink]编[cyan]号[red]95[violet]27",
-  "description": "
-
- 本MOD核心代码都是 @滞人 所写
- 非常感谢他老人家 (T_T)
- 
- github下载安装（V7版本）
- https: //github.com/no9527dada/creator
- 
- 
- 另外，V7版本代码源已经上传到github。在游戏mod界面输入它直接导入：
-              no9527dada/creator
-
- 该模组主要是以工厂科技线发展为主
- 防守方面较为简单
- 科技线一共有11个等级：
- 石英-硅晶体-紫晶-微晶1-微晶2-微晶3-微晶4-微晶5-创世粒子-创世之星-创世神
- 当然在这其中还有很多分支，比如微晶1-创世微子、微晶1-魔力石-魔能晶1-魔能晶2-魔能晶3-创世粒子
- 创世粒子必须要5级微晶和3级魔能晶一起才能制造。
- 在这里必须提容易会忘记的细节。创世微子的机器是有微晶1时就可以制造
- 但使用的地方是在大后期做出创世之星后才会使用
- 并且5小时才会产出一个微子，所以越早放置越好
- 本模组有很多机器设置了无法被超速
- 总之，这是一个很肝很肝的MOD
- QQ群：316035230(满)  289848516
- 
- 众所周知，创世神在后期就是一个挂机模组
--
--
-  Newly added content:
-
-  Resources: 36
-  Factory: 100+
-  Wall: 13
-  Transmission: 20
-  Turret: 16
-  Mineral: 6
-  Liquid: 5
-  State: 2
-  Unit: 43
-  Map: 40
-  Planets: 11
-  If you like this module, please click thumbs on this page *⸜(^_^)⸝*
-  Subsequent will update more if you have Suggestions or comments please go to the QQ group 316035230 and discussion of the author.
-  Or send email to cyj674971336@163.com
-  新增加的内容:
-  
-  资源 36
-  工厂 100+
-  墙：13
-  传输 20
-  炮塔 16
-  矿物 6
-  液体 5
-  状态 2
-  单位：43
-  地图：40
-  行星：11
-  Mindustry Mindustry-mod Mindustry-v7 Mindustry-Planet
-  如果您觉得此模组不错，请对本模组点赞*⸜(^_^)⸝*
-  如果你有建议或者意见请到QQ群316035230与作者讨论。或者发送邮件至cyj674971336@163.com
-  —————————————————————————创世神-creator",
-  "version": "2.4.4",
-  "minGameVersion": 135,
-  "hidden": false //true//辅助性质
-  // "dependencies": ["MOD name"],   JS里的引用： const ui = require("MOD name/js文件 name");
+	"name": "skin",
+	"displayName": "本地皮肤",
+	"author": "9527",
+	"description": "此MOD对两个星球T3核心单位添加了动态效果皮肤，可以在多人服务器上使用",
+	"version": "1.4",
+	"hidden": true,
+	"minGameVersion": 137
 }
