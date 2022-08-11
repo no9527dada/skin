@@ -15,7 +15,7 @@ Events.run(Trigger.draw, () => {
 });
 Events.run(Trigger.draw, () => {
     Groups.unit.each(cons(u => {
-        if (u.type == UnitTypes.gamma && u == Vars.player.unit()) {
+        if (u.type == UnitTypes.emanate && u == Vars.player.unit()) {
             var z = Draw.z();
             Draw.z(Layer.flyingUnit - 0.5);
             Draw.color(cogs);
@@ -84,7 +84,7 @@ UnitTypes.gamma.parts.add(
         return w;
     })()
 );
-UnitTypes.assemblyDrone.parts.add(
+UnitTypes.emanate.parts.add(
     (() => {
         const w = new HoverPart()
         w.x = 4.9;
@@ -99,7 +99,7 @@ UnitTypes.assemblyDrone.parts.add(
         return w;
     })()
 );
-UnitTypes.assemblyDrone.parts.add(
+UnitTypes.emanate.parts.add(
     (() => {
         const w = new HoverPart()
         w.x = 4.9;
@@ -114,7 +114,7 @@ UnitTypes.assemblyDrone.parts.add(
         return w;
     })()
 );
-UnitTypes.assemblyDrone.abilities.add(wwee);
+UnitTypes.emanate.abilities.add(wwee);
 const bbb = (() => {
     const v = new JavaAdapter(StatusEffect, {
     }, "");
