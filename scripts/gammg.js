@@ -1,5 +1,5 @@
 var cogs = Color.valueOf("6dd8fe");
-const effect2 = new Effect(80, e => {
+const effect2 = new Effect(45, e => {
     Draw.color(Color.valueOf("ab83f6ff"), e.color, e.fin());
     Lines.stroke(e.fout() * 1 + 0.5);
     Angles.randLenVectors(e.id, 10, 100 * e.fin(), e.rotation, 5, (x, y) => {
@@ -11,30 +11,6 @@ const effect2 = new Effect(80, e => {
         Fill.circle(e.x + x, e.y + y, 0.1 + e.fout() * 1.4);
     });
 })
-Events.run(Trigger.draw, () => {
-    Groups.unit.each(cons(u => {
-        if (u.type == UnitTypes.beta && u == Vars.player.unit()) {
-            var z = Draw.z();
-            Draw.z(Layer.flyingUnit - 0.5);
-            Draw.color(cogs);
-            Draw.alpha(1);
-            Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
-            Draw.z(z);
-        }
-    }));
-});
-Events.run(Trigger.draw, () => {
-    Groups.unit.each(cons(u => {
-        if (u.type == UnitTypes.incite && u == Vars.player.unit()) {
-            var z = Draw.z();
-            Draw.z(Layer.flyingUnit - 0.5);
-            Draw.color(cogs);
-            Draw.alpha(1);
-            Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
-            Draw.z(z);
-        }
-    }));
-});
 const moveEffect = (x, y, c, e, i) => {
     var ability = new JavaAdapter(MoveEffectAbility, {
         localized() {
@@ -64,23 +40,23 @@ const moveEffect = (x, y, c, e, i) => {
 };
 
 const w = moveEffect(0, -3, cogs, effect2, 3);
-UnitTypes.beta.abilities.add(w)
-UnitTypes.beta.parts.add(
+UnitTypes.alpha.abilities.add(w)
+UnitTypes.alpha.parts.add(
     (() => {
         const w = new HoverPart()
         w.x = 3.9;
         w.y = 3;
         w.color = cogs;
         w.mirror = true;
-        w.radius = 5;
-        w.phase = 40;
+        w.radius = 4;
+        w.phase = 50;
         w.stroke = 1;
         w.layerOffset = -0.001;
         w.color = Color.valueOf("bf92f9");
         return w;
     })()
 );
-UnitTypes.beta.parts.add(
+UnitTypes.alpha.parts.add(
     (() => {
         const w = new HoverPart()
         w.x = 4.9;
@@ -88,7 +64,7 @@ UnitTypes.beta.parts.add(
         w.color = cogs;
         w.mirror = true;
         w.radius = 5;
-        w.phase = 40;
+        w.phase = 70;
         w.stroke = 1;
         w.layerOffset = -0.001;
         w.color = Color.valueOf("bf92f9");
@@ -96,25 +72,11 @@ UnitTypes.beta.parts.add(
     })()
 );
 
-UnitTypes.incite.parts.add(
+UnitTypes.evoke.parts.add(
     (() => {
         const w = new HoverPart()
         w.x = 0;
-        w.y = 5.5;
-        w.color = cogs;
-        w.radius = 8;
-        w.phase = 90;
-        w.stroke = 3;
-        w.layerOffset = -0.001;
-        w.color = Color.valueOf("bf92f9");
-        return w;
-    })()
-);
-UnitTypes.incite.parts.add(
-    (() => {
-        const w = new HoverPart()
-        w.x = 3.5;
-        w.y = 0;
+        w.y = 3;
         w.color = cogs;
         w.mirror = true;
         w.radius = 8;
@@ -125,19 +87,19 @@ UnitTypes.incite.parts.add(
         return w;
     })()
 );
-UnitTypes.incite.parts.add(
+UnitTypes.evoke.parts.add(
     (() => {
         const w = new HoverPart()
-        w.x = 4.8;
-        w.y = -4.2;
+        w.x = 5.2;
+        w.y = -3.4;
         w.color = cogs;
         w.mirror = true;
-        w.radius = 8;
-        w.phase = 90;
-        w.stroke = 3;
+        w.radius = 7;
+        w.phase = 60;
+        w.stroke = 2;
         w.layerOffset = -0.001;
         w.color = Color.valueOf("bf92f9");
         return w;
     })()
 );
-UnitTypes.incite.abilities.add(w);
+UnitTypes.evoke.abilities.add(w);
