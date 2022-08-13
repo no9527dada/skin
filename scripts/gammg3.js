@@ -7,6 +7,7 @@ const effect2 = new Effect(80, e => {
         Lines.lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fslope() * 5 + 0.5);
         
     });
+    Draw.reset();
     Draw.color(cogs, e.color, e.fin());
     Angles.randLenVectors(e.id, 5, 3.5 + e.fin() * 12, (x, y) => {
         Fill.circle(e.x + x, e.y + y, 0.1 + e.fout() * 1.4);
@@ -22,6 +23,7 @@ Events.run(Trigger.draw, () => {
             Draw.alpha(1);
             Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
             Draw.rect(Core.atlas.find("skin-gammaSplus-2"), u.x, u.y, -Time.time * 0.6);
+            Draw.reset();
             Draw.z(z);
         }
     }));
@@ -35,6 +37,7 @@ Events.run(Trigger.draw, () => {
             Draw.alpha(1);
             Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
             Draw.rect(Core.atlas.find("skin-gammaSplus-2"), u.x, u.y, -Time.time * 0.6);
+            Draw.reset();
             Draw.z(z);
         }
     }));

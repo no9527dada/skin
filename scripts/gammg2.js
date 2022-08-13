@@ -19,6 +19,7 @@ Events.run(Trigger.draw, () => {
             Draw.color(cogs);
             Draw.alpha(1);
             Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
+            Draw.reset();
             Draw.z(z);
         }
     }));
@@ -31,6 +32,7 @@ Events.run(Trigger.draw, () => {
             Draw.color(cogs);
             Draw.alpha(1);
             Draw.rect(Core.atlas.find("skin-gammaSplus-1"), u.x, u.y, Time.time * 0.6);
+            Draw.reset();
             Draw.z(z);
         }
     }));
